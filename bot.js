@@ -3,7 +3,7 @@ const { Client, GatewayIntentBits } = require('discord.js');
 const TOKEN = process.env.DISCORD_TOKEN;
 
 // ID твоего аккаунта (кто может добавлять ботов)
-const ALLOWED_USERS = ['598798724290052096']; // Замени на свой ID
+const ALLOWED_USERS = ['598798724290052096'];
 
 const client = new Client({
   intents: [
@@ -15,7 +15,7 @@ const client = new Client({
   ]
 });
 
-// Ответ на сообщения с именем Артур
+// Ответ на сообщения
 client.on('messageCreate', async (message) => {
   if (message.author.bot) return;
   
@@ -23,6 +23,10 @@ client.on('messageCreate', async (message) => {
   
   if (content === 'артур') {
     await message.reply('hi');
+  }
+  
+  if (content === 'жигули') {
+    await message.reply('иди нахуй');
   }
 });
 
