@@ -3,7 +3,7 @@ const { Client, GatewayIntentBits } = require('discord.js');
 const TOKEN = process.env.DISCORD_TOKEN;
 
 // ID твоего аккаунта (кто может добавлять ботов)
-const ALLOWED_USERS = ['598798724290052096']; // Замени на свой ID
+const ALLOWED_USERS = ['ТВОЙ_DISCORD_ID']; // Замени на свой ID
 
 const client = new Client({
   intents: [
@@ -42,6 +42,8 @@ client.on('guildMemberAdd', async (member) => {
         await targetMember.kick('Бот-протектор: попытка добавить бота');
       }
     }
+  } else {
+    console.log(`[INFO] Разрешённый пользователь ${executor?.tag} добавил бота ${member.user.tag}`);
   }
 });
 
