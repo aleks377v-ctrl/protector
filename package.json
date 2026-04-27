@@ -1,14 +1,11 @@
 {
   "name": "discord-bot-protector",
   "version": "1.0.0",
-  "description": "Bot protector for Discord server",
-  "main": "index.js",
+  "main": "bot.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node bot.js"
   },
   "dependencies": {
     "discord.js": "^14.14.1"
-  },
-  "author": "YourName",
-  "license": "MIT"
+  }
 }
